@@ -18,7 +18,7 @@ You shouldn't, because trivia is supposed to be inconsequential. Boredom is the 
 
 * Insert personalized data to store for later use.
 
-* Be able to answer question and stores tha data.
+* Be able to answer question and stores the data.
 
 * Display a competitor that will motivate the play to be better at trivia.
 
@@ -30,7 +30,7 @@ You shouldn't, because trivia is supposed to be inconsequential. Boredom is the 
 
 * It will, most likely, won't be a mobile app.
 
-* It won't have simultanious multiplayer.
+* It won't have simultaneous multiplayer.
 
 ## Minimum Viable Product vs
 
@@ -56,7 +56,7 @@ You shouldn't, because trivia is supposed to be inconsequential. Boredom is the 
 
 ### Data Flow
 
-> User supplies their name -> game data supplys questions -> user name and game data flows into the race depiction -> the users answer flow into the leaderboard
+> User supplies their name -> game data supplies questions -> user name and game data flows into the race depiction -> the users answer flow into the leaderboard
 
 ---------------
 
