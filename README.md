@@ -27,8 +27,8 @@ Trivia game race against an opponent.
 
 ### Links and Resources
 
-- [Wireframe](resources/domain-model.png)
-- [Domain Model](resources/wireframe.png)
+- [Wireframe](resources/wireframe.png)
+- [Domain Model](resources/domain-model.png)
 - [public repo](https://github.com/The-Go-Gitters/turbo-octo-tribble)
 - [Mozilla MDN Web Docs](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide)
 
