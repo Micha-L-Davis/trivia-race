@@ -1,36 +1,48 @@
-/* TEAM MOTTO: please work? */
+
 
 body {
+  
   background-color: tan;
-  margin: center;
+  
 }
 
+header{
+  text-align: center;
+}
 #banner {
   background-color: lightcoral;
   height: 200px;
-  width: 1000px;
+  width: 1600px;
   display: flex;
   justify-content: space-between;
+  text-align:center;
+  margin:auto;
 }
 
 #banner h1 {
+  font-family: 'Rye', cursive;
   font-size: 500%;
   padding-top: 35px;
   display: block;
 }
 
 #navi {
-  width: 1000px;
+  /* border: solid black 2px; */
+  width: 1600px;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
 }
-
 nav ul li {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-top: 5px;
   display: inline-block;
-  text-decoration: none;
-} */
+} 
 
-nav a {
+a {
   text-decoration: none;
   color: aliceblue;
 }
