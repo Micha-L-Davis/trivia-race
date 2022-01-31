@@ -64,6 +64,7 @@ let oArr = [
 
 let qPara = document.getElementById('q-para');
 let answerForm =  document.getElementById('input');
+let answerRadios = document.forms['input'].elements['answer'];
 let answerA = document.getElementById('answer-a');
 let answerB = document.getElementById('answer-b');
 let answerC = document.getElementById('answer-c');
@@ -89,6 +90,7 @@ Question.list = [];
 
 let currentQuestion;
 let questionCount = 5;
+let correctQuestions = 0;
 constructQuestions();
 chooseQuestion();
 
@@ -127,11 +129,15 @@ function handleGuess(event){
 
   if (event.target.value === currentQuestion.answer){
     console.log('correct!');
+    correctQuestions++;
   }
   else{
     console.log('incorrect!');
   }
   if (questionCount){
+    for (let i in answerRadios){
+      answerRadios[i].checked = false;
+    }
     chooseQuestion();
   }
   else{
