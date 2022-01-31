@@ -2,15 +2,18 @@
 
 body {
   
-  background-color: tan;
-  
+  background-color: #abbe99;
 }
 
 header{
   text-align: center;
 }
+
+div img {
+  width: 200px;
+}
 #banner {
-  background-color: lightcoral;
+  background-color: #71873f;
   height: 200px;
   width: 1600px;
   display: flex;
@@ -24,6 +27,7 @@ header{
   font-size: 500%;
   padding-top: 35px;
   display: block;
+  color:aliceblue;
 }
 
 #navi {
@@ -45,5 +49,33 @@ nav ul li {
 a {
   text-decoration: none;
   color: aliceblue;
+}
+
+#footer {
+  background-color:#71873f;
+ clear: both;
+ position: fixed;
+ margin: auto;
+ right: 0;
+ left: 0;
+ bottom: 0;
+ width: 1600px;
+ text-align: center;
+ height: 150px;
+ 
+}
+
+#left-footer{
+  float:left;
+  margin-left: 100px;
+}
+#right-footer{
+  margin-right: 100px;
+  float:right;
+}
+
+.center{
+  font-size: large;
+  margin-top:60px;
 }
 
