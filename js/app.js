@@ -37,7 +37,7 @@ let oArr = [
 
 //#region DOM Handles
 
-let questionBox = document.getElementById('questions');
+let qPara = document.getElementById('q-para');
 let answerForm =  document.getElementById('input');
 let answerA = document.getElementById('answer-a');
 let answerB = document.getElementById('answer-b');
@@ -60,6 +60,15 @@ Question.list = [];
 
 //#endregion
 
+//#region Runtime Code
+
+let currentQuestion;
+let questionCount = 5;
+constructQuestions();
+chooseQuestion();
+
+//#endregion
+
 //#region Global Functions
 
 // Populating Questions List
@@ -71,14 +80,15 @@ function constructQuestions(){
 
 // Choosing a question
 function chooseQuestion(){
+  questionCount--;
   let index = randomIntInclusive(0, Question.list.length);
-  let question = Question.list.splice(index, 1);
-  serveQuestion(question[0]);
+  currentQuestion = Question.list.splice(index, 1)[0];
+  serveQuestion(currentQuestion);
 }
 
 // Displaying A Question
 function serveQuestion(question){
-  questionBox.firstChild.textContent = question.question;
+  qPara.textContent = question.question;
   answerA.textContent = question.optionsArr[0];
   answerB.textContent = question.optionsArr[1];
   answerC.textContent = question.optionsArr[2];
@@ -90,7 +100,18 @@ function serveQuestion(question){
 function handleGuess(event){
   event.preventDefault();
 
-  console.log(event);
+  if (event.target.input.value === currentQuestion.answer){
+    console.log('correct!');
+  }
+  else{
+    console.log('incorrect!');
+  }
+  if (questionCount){
+    chooseQuestion();
+  }
+  else{
+    endRace();
+  }
 }
 
 // 3. compare input to answer
@@ -98,14 +119,18 @@ function handleGuess(event){
 // 4. calculate score
 
 
+function endRace(){
+  // display results
+}
+
 function randomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 //#endregion
-answerForm.addEventListener('submit', handleGuess);
+
 //#region Event Listener
 
+answerForm.addEventListener('change', handleGuess);
 
-
-
+//#endregion
