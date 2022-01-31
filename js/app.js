@@ -14,9 +14,23 @@ let qArr = [
   'How long does the average housefly live for?',
   'How many babies can a German cockroach produce in one year?',
   'How many flowers do honey bees have to visit in order to make one pound of honey?',
-  ''
+  'Which member of the Beatles had a cat named Elvis?',
+  'In Rome, which animal is protected under the law?',
+  'What common farm animal doesn\'t have teeth on their upper jaw?',
+  'What object does a male penguin often gift to a female penguin to win her over?',
+  'Which type of animal is known to be the fastest bird in the world?',
+  'Which two mammals are the only ones known to lay eggs?',
+  'Which bird is known to be the smallest in the world?',
+  'What popular sea creature has the ability to clone itself?',
+  'Which sea creature is known to be the only natural predator of the Great White Shark?',
+  'Why are flamingos pink?',
+  'Which bird is known to have eyes larger than its brain?',
+  'Where is a shrimp\'s heart located in its body?',
+  'Which mammal is not able to jump?',
 ];
-let aArr = ['c','a','d','a','b','b','c','b','a','d','d','c','a',''];
+
+let aArr = ['c','a','d','a','b','b','c','b','a','d','d','c','a','b','a','d','c','d','d','a','b','c','d','a','b','c'];
+
 let oArr = [
   ['Tiger','Bear','Hippopotamus','Elephant'],
   ['Paws','Ears','Eyes','Nose'],
@@ -31,9 +45,20 @@ let oArr = [
   ['80 years','1 day','10 hours','28 days'],
   ['1,000','100','30,000','35 million'],
   ['2 million','100','So Many','10,000'],
-  ['','','',''],
+  ['Ringo Starr','John Lennon','Paul McCartney','George Harrison'],
+  ['Cat','Mongoose','Dragon','Parrot'],
+  ['Cow','Pig','Geese','Goats'],
+  ['Snowball','Icicle','A Rock','Flower'],
+  ['The Golden Eagle','The Osprey','The Duck','The Peregrine Falcon'],
+  ['The elephant and the lion','The bat and the raccoon','The hedgehog and the gopher','The anteater and the duck-billed platypus.'],
+  ['Bee Hummingbird','Finch','Yellow Canary','Lovebird'],
+  ['Clown Fish','Jellyfish','Sea Urchin','Giant Squid'],
+  ['Loch Ness Monster','Humpback Whale','Orca Whale','None'],
+  ['Their ancestral DNA was changed 50 years ago','Flamingos are extinct','Flamingos are not pink','Due to their main source of food being shrimp and algae'],
+  ['Ostrich','Owl','Bald Eagle','Vulture'],
+  ['Tail','Head','Abdomen','They do not have a heart'],
+  ['Hippopotamus','Rhinoceros','Elephant','Polar Bear'],
 ];
-
 
 //#region DOM Handles
 
