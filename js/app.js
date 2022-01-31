@@ -140,7 +140,7 @@ function handleGuess(event){
   }
   if (questionCount){
     for (let i in answerRadios){
-      answerRadios[i].checked = false;
+      // answerRadios[i].checked = false;
     }
     chooseQuestion();
   }
