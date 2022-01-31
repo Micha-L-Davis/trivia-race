@@ -1,1 +1,37 @@
-/* please work? */
+/* TEAM MOTTO: please work? */
+
+body {
+  background-color: tan;
+  margin: center;
+}
+
+#banner {
+  background-color: lightcoral;
+  height: 200px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#banner h1 {
+  font-size: 500%;
+  padding-top: 35px;
+  display: block;
+}
+
+#navi {
+  width: 1000px;
+  margin: auto;
+
+}
+
+nav ul li {
+  display: inline-block;
+  text-decoration: none;
+} */
+
+nav a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
