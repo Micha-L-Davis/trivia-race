@@ -35,5 +35,16 @@ Trivia game race against an opponent.
 
 ### Reflections and Comments
 
--
--
+
+#### Morning Standup Monday, January 31, 2022
+
+Led by Matt Rangel
+
+- First steps - Build out skeleton of project
+- Everyone add  head shot or picture to img folder
+- collect questions for trivia - 20
+  - 5 questions per race
+- settle on theme , animal racer
+- settle on question theme, animal facts
+- build race track
+- add animal images
