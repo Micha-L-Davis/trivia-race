@@ -38,7 +38,7 @@ let oArr = [
 //#region DOM Handles
 
 let questionBox = document.getElementById('questions');
-let answerBox =  document.getElementById('input');
+let answerForm =  document.getElementById('input');
 let answerA = document.getElementById('answer-a');
 let answerB = document.getElementById('answer-b');
 let answerC = document.getElementById('answer-c');
@@ -87,8 +87,10 @@ function serveQuestion(question){
 
 
 // 2. collect input
-function handleGuess(){
+function handleGuess(event){
+  event.preventDefault();
 
+  console.log(event);
 }
 
 // 3. compare input to answer
@@ -101,7 +103,7 @@ function randomIntInclusive(min, max) {
 }
 
 //#endregion
-answerBox.addEventListener('click', handleGuess);
+answerForm.addEventListener('submit', handleGuess);
 //#region Event Listener
 
 
