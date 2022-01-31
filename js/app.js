@@ -1,5 +1,19 @@
 'use strict';
 
+//#region DOM Handles
+
+let qPara = document.getElementById('q-para');
+let answerForm =  document.getElementById('input');
+let answerRadios = document.forms['input'].elements['answer'];
+let answerA = document.getElementById('answer-a');
+let answerB = document.getElementById('answer-b');
+let answerC = document.getElementById('answer-c');
+let answerD = document.getElementById('answer-d');
+
+//#endregion
+
+//#region Data Containers
+
 let qArr = [
   'Which mammal is known to have the most powerful bite in the world?',
   'A dog sweats through which part of its body?',
@@ -60,16 +74,6 @@ let oArr = [
   ['Hippopotamus','Rhinoceros','Elephant','Polar Bear'],
 ];
 
-//#region DOM Handles
-
-let qPara = document.getElementById('q-para');
-let answerForm =  document.getElementById('input');
-let answerRadios = document.forms['input'].elements['answer'];
-let answerA = document.getElementById('answer-a');
-let answerB = document.getElementById('answer-b');
-let answerC = document.getElementById('answer-c');
-let answerD = document.getElementById('answer-d');
-
 //#endregion
 
 //#region Question Constructor & Prototype
@@ -123,7 +127,7 @@ function serveQuestion(question){
 }
 
 
-// 2. collect input
+// Answer Event Handler
 function handleGuess(event){
   event.preventDefault();
 
@@ -144,10 +148,6 @@ function handleGuess(event){
     endRace();
   }
 }
-
-// 3. compare input to answer
-
-// 4. calculate score
 
 
 function endRace(){
