@@ -125,7 +125,7 @@ function serveQuestion(question){
 function handleGuess(event){
   event.preventDefault();
 
-  if (event.target.input.value === currentQuestion.answer){
+  if (event.target.value === currentQuestion.answer){
     console.log('correct!');
   }
   else{
