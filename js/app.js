@@ -85,10 +85,11 @@ function Question(question, answer, optionsArr) {
   this.answer = answer;
   this.optionsArr = optionsArr;
 
-  Question.list.push(this);
+  questionList.push(this);
+  console.log(questionList);
 }
 
-Question.list = [];
+let questionList = [];
 
 function Racer(image, name) {
   this.image = image;
@@ -104,8 +105,11 @@ function Racer(image, name) {
 //#region Runtime Code
 
 let currentQuestion;
-let questionCount = 15;
+let possibleAnswers = ['a', 'b', 'c', 'd'];
+console.log(possibleAnswers);
 constructQuestions();
+console.log('list length: ' + questionList[24].question);
+console.log('list length: ' + questionList[25].question);
 chooseQuestion();
 let player = new Racer('/img/racer-img/chicken_front.png','chicken');
 let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
@@ -115,17 +119,23 @@ let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
 
 // Populating Questions List
 function constructQuestions(){
-  for (let i in qArr){
+  for (let i=0; i < qArr.length; i++){
+    console.log(i);
     new Question(qArr[i], aArr[i], oArr[i]);
   }
 }
 
 // Choosing a question
 function chooseQuestion(){
-  questionCount--;
-  let index = randomIntInclusive(0, Question.list.length);
-  currentQuestion = Question.list.splice(index, 1)[0];
-  serveQuestion(currentQuestion);
+  let index = randomIndex();
+
+  console.log(questionList);
+  if (questionList){    console.log(index);
+    currentQuestion = questionList.splice(index, 1)[0];
+    console.log('current question = ' + currentQuestion);
+
+    serveQuestion(currentQuestion);
+  }
 }
 
 // Displaying A Question
@@ -142,16 +152,28 @@ function serveQuestion(question){
 function handleGuess(event){
   event.preventDefault();
   if(event.target.type === 'button'){
-    console.log(event.target.value);
     if (event.target.value === currentQuestion.answer){
       console.log('correct!');
       player.score++;
       console.log(player.score);
-      advanceRacers(player,opponent);
     }
     else{
       console.log('incorrect!');
     }
+
+    let aiAnswer = randomIntInclusive(0, 1);
+    
+    if (aiAnswer === 0){
+      console.log('AI guesses correctly');
+      opponent.score++;
+    }
+    else {
+      console.log('AI guesses incorrectly');
+    }
+    console.log(opponent.score);
+
+    advanceRacers(player, opponent);
+
     if (player.score !== 8 || opponent.score !== 8){
       chooseQuestion();
     }
@@ -169,7 +191,6 @@ function advanceRacers(player, opponent){
   player.positionY = playerCoords[player.score][1];
   opponent.positionX = opponentCoords[opponent.score][0];
   opponent.positionY = opponentCoords[opponent.score][1];
-  console.log(player.positionX);
   renderRacers(player,opponent);
 }
 
@@ -190,6 +211,10 @@ function endRace(){
 
 function randomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function randomIndex() {
+  return Math.floor(Math.random() * questionList.length);
 }
 
 //#endregion
