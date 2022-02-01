@@ -4,7 +4,7 @@ body {
   
   background-color: #abbe99;
 }
-
+/* ********************* Header ******************** */
 header{
   text-align: center;
   
@@ -51,7 +51,48 @@ a {
   text-decoration: none;
   color: aliceblue;
 }
+/* ****************************** Splash *********** */
 
+#pregame{
+  /* display: none; */
+  background-color:#abbe80;
+  border:  lightgray ;
+  width: 900px;
+  height: 700px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name-input{
+  margin-top: 150px;
+  font-size: 75px; 
+}
+
+input[type="text"]{
+    font-size:45px;
+    text-align: center;
+}
+#player-choice{
+  font-size: 2vw;
+  margin-top: 50px;
+}
+
+#player-choice input[type=radio] {
+  border: 0px;
+  font-size:45px;
+}
+
+#player-choice label{
+text-align: center;
+}
+
+
+/* ***************** FOOTER ******************* */
 #footer {
   background-color:#71873f;
  clear: both;
