@@ -142,7 +142,7 @@ function serveQuestion(question){
 function handleGuess(event){
   event.preventDefault();
   if(event.target.type === 'button'){
-
+    console.log(event.target.value);
     if (event.target.value === currentQuestion.answer){
       console.log('correct!');
       player.score++;
@@ -161,8 +161,8 @@ function handleGuess(event){
   }
 }
 
-let playerCoords = [['45px', '250px'],['80px', '80px'],['275px','60px'],['480px','80px'],['533px','259px'],['480px','420px'],['275px','460px'],['80px','420px']];
-let opponentCoords = [['125px', '250px'],['140px', '130px'],['250px','125px'],['420px','130px'],['450px','250px'],['420px','380px'],['300px','400px'],['150px','375px']];
+let playerCoords = [['45px', '250px'],['80px', '80px'],['275px','60px'],['480px','80px'],['533px','259px'],['480px','420px'],['275px','460px'],['80px','420px'], ['45px', '250px']];
+let opponentCoords = [['125px', '250px'],['140px', '130px'],['250px','125px'],['420px','130px'],['450px','250px'],['420px','380px'],['300px','400px'],['150px','375px'], ['125px', '250px']];
 
 function advanceRacers(player, opponent){
   player.positionX = playerCoords[player.score][0];
@@ -204,9 +204,7 @@ answerForm.addEventListener('click', handleGuess);
 
 function handleSubmit(event){
   event.preventDefault();
-
   document.getElementById('pregame').style.display='none';
-
   document.getElementById('live-play').style.display='flex';
 }
 
