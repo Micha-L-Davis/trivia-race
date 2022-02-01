@@ -170,11 +170,11 @@ function handleGuess(event){
 
     advanceRacers(player, opponent);
 
-    if (player.score !== 8 || opponent.score !== 8){
-      chooseQuestion();
+    if (player.score >= 8 || opponent.score >= 8){
+      endRace();
     }
     else{
-      endRace();
+      chooseQuestion();
     }
   }
 }
@@ -219,6 +219,7 @@ function randomIndex() {
 }
 
 function storeData() {
+  console.log('saving');
   let playerData = JSON.stringify(questionList);
   localStorage.setItem('leaderboard', playerData);
 }
