@@ -7,7 +7,6 @@ body {
 /* ********************* Header ******************** */
 header{
   text-align: center;
-  
 }
 
 div img {
@@ -24,7 +23,7 @@ div img {
 }
 
 #banner h1 {
-  font-family: 'Rye', cursive;
+  font-family: 'Racing Sans One', cursive;
   font-size: 500%;
   padding-top: 35px;
   display: block;
@@ -52,6 +51,16 @@ a {
   color: aliceblue;
 }
 /* ****************************** Splash *********** */
+#welcome{
+  font-size: 60px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+#welcome-box p{
+  font-size: 25px;
+  margin-top: 20px;
+}
 
 #pregame{
   /* display: none; */
@@ -66,16 +75,31 @@ a {
   display:flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Teko', sans-serif;
 }
 
 #name-input{
-  margin-top: 150px;
-  font-size: 75px; 
+  margin-top: 70px;
+  font-size: 45px; 
+}
+
+
+
+#selectR{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+#choice {
+  font-size: 25px;
 }
 
 input[type="text"]{
     font-size:45px;
     text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
 }
 #player-choice{
   font-size: 2vw;
