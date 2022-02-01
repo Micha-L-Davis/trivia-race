@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 600px;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr .7fr 1fr;
+  position: relative;
 }
 
 #race img {
@@ -10,5 +11,24 @@
   max-height: 200px;
 }
 
+.too-big {
+  height: 142px;
+}
 
 
+.racer {
+  height: 32px;
+  width: 32px;
+}
+
+#player-racer {
+  position: absolute;
+  top: 250px;
+  left: 45px;
+}
+
+#opponent-racer {
+  position: absolute;
+  top: 250px;
+  left: 125px;
+}
