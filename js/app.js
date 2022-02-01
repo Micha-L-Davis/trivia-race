@@ -9,6 +9,8 @@ let answerA = document.getElementById('answer-a');
 let answerB = document.getElementById('answer-b');
 let answerC = document.getElementById('answer-c');
 let answerD = document.getElementById('answer-d');
+let playerImg = document.getElementById('player-racer');
+let opponentImg = document.getElementById('opponent-racer');
 
 //#endregion
 
@@ -87,6 +89,15 @@ function Question(question, answer, optionsArr) {
 }
 
 Question.list = [];
+function Racer(image, name) {
+  this.image = image;
+  this.name = name;
+  this.positionX = '45px';
+  this.positionY = '250px';
+  this.score = 0;
+
+
+}
 
 //#endregion
 
@@ -97,7 +108,8 @@ let questionCount = 5;
 let correctQuestions = 0;
 constructQuestions();
 chooseQuestion();
-
+let player = new Racer('/img/racer-img/chicken_front.png','chicken');
+let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
 //#endregion
 
 //#region Global Functions
@@ -133,7 +145,8 @@ function handleGuess(event){
 
   if (event.target.value === currentQuestion.answer){
     console.log('correct!');
-    correctQuestions++;
+    player.score++;
+    advanceRacers(player,opponent);
   }
   else{
     console.log('incorrect!');
@@ -149,6 +162,28 @@ function handleGuess(event){
   }
 }
 
+let playerCoords = [[45, 250],[80, 80],[275,60],[480,80],[533,259],[480,420],[275,460],[80,420]];
+let opponentCoords = [[125, 250],[140, 130],[250,125],[420,130],[450,250],[420,380],[300,400],[150,375]];
+
+function advanceRacers(player, opponent){
+  player.positionX = playerCoords[player.score][0];
+  player.positionY = playerCoords[player.score][1];
+  opponent.positionX = opponentCoords[opponent.score][0];
+  opponent.positionY = opponentCoords[opponent.score][1];
+
+  renderRacers(player,opponent);
+}
+
+function renderRacers(player, opponent){
+
+  playerImg.style.left = player.positionX;
+  playerImg.style.top =player.positionY;
+  opponentImg.style.left = opponent.positionX;
+  opponentImg.style.top = opponent.positionY;
+
+}
+
+renderRacers(playerImg, opponentImg);
 
 function endRace(){
   // display results
