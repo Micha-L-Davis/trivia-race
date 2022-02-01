@@ -207,6 +207,7 @@ renderRacers(playerImg, opponentImg);
 
 function endRace(){
   // display results
+  storeData();
 }
 
 function randomIntInclusive(min, max) {
@@ -215,6 +216,11 @@ function randomIntInclusive(min, max) {
 
 function randomIndex() {
   return Math.floor(Math.random() * questionList.length);
+}
+
+function storeData() {
+  let playerData = JSON.stringify(questionList);
+  localStorage.setItem('leaderboard', playerData);
 }
 
 //#endregion
