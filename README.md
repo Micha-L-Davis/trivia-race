@@ -61,3 +61,37 @@ Led by Matt Rangel
 -----------------
 
 #### Morning Standup Tuesday, February 1, 2022
+
+## Review
+
+- Complete logic for trivia questions
+
+- Need to do leaderboard and about us
+
+To be completed today
+
+### HTML
+
+- Complete Racetrack
+  - racetrack images
+
+- Animal Images to index
+
+### JavaScript
+
+- Functionality for accepting the players information and storing somewhere, local storages
+
+- Creating the player object so we can manipulate
+
+- Be able to hide and reveal panels gather information panels from the beginning, as well as the question panels.
+  - Create content 'You guessed correctly!' or 'You guessed poorly'
+
+- how to give the right instructions to the racers to move about the board
+
+### CSS
+
+- Adjust the header and footer sizing for 1920 by 1080 resolutions
+
+- Finish racetrack
+
+- Style the questions and inputs
