@@ -32,18 +32,27 @@
     <main>
         <section id="pregame">
             <form id="player-select">
+                <div id="welcome-box">
+                    <h2 id="welcome">Welcome to Animal Racer!</h2>
+                    <p>This is a trivia race to the finish line!</p>
+                    <p>Put your animal knowledge to the test!</p>
+                </div>
                 <div id="name-input">
                     <label>Your Name:
                         <input type="text" name="user-name" required="required">
                     </label>
                 </div>
                 <div id="player-choice">
-                    <label>Select a Racer:
+                    <div id="selectR">
+                        <label>Select a Racer:
+                    </div>
+                    <div id="choice">
                         <input type="radio" name="user-icon" value="chicken" required="required">Chicken
                         <input type="radio" name="user-icon" value="llama" required="required">Llama
                         <input type="radio" name="user-icon" value="cow" required="required">Cow
                         <input type="radio" name="user-icon" value="pig" required="required">Pig
                         <input type="radio" name="user-icon" value="sheep" required="required">Sheep
+                    </div>   
                     </label>
                 </div>
                 <!-- <div id="opponent-choice">
