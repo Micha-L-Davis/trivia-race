@@ -76,6 +76,10 @@ let oArr = [
   ['Hippopotamus','Rhinoceros','Elephant','Polar Bear'],
 ];
 
+let playerCoords = [['45px', '250px'],['80px', '80px'],['275px','60px'],['480px','80px'],['533px','259px'],['480px','420px'],['275px','460px'],['80px','420px'], ['45px', '250px']];
+
+let opponentCoords = [['125px', '250px'],['140px', '130px'],['250px','125px'],['420px','130px'],['450px','250px'],['420px','380px'],['300px','400px'],['150px','375px'], ['125px', '250px']];
+
 //#endregion
 
 //#region Question Constructor & Prototype
@@ -86,7 +90,6 @@ function Question(question, answer, optionsArr) {
   this.optionsArr = optionsArr;
 
   questionList.push(this);
-  console.log(questionList);
 }
 
 let questionList = [];
@@ -104,12 +107,9 @@ function Racer(image, name) {
 
 //#region Runtime Code
 
+
 let currentQuestion;
-let possibleAnswers = ['a', 'b', 'c', 'd'];
-console.log(possibleAnswers);
 constructQuestions();
-console.log('list length: ' + questionList[24].question);
-console.log('list length: ' + questionList[25].question);
 chooseQuestion();
 let player = new Racer('/img/racer-img/chicken_front.png','chicken');
 let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
@@ -120,7 +120,6 @@ let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
 // Populating Questions List
 function constructQuestions(){
   for (let i=0; i < qArr.length; i++){
-    console.log(i);
     new Question(qArr[i], aArr[i], oArr[i]);
   }
 }
@@ -129,11 +128,8 @@ function constructQuestions(){
 function chooseQuestion(){
   let index = randomIndex();
 
-  console.log(questionList);
-  if (questionList){    console.log(index);
+  if (questionList){
     currentQuestion = questionList.splice(index, 1)[0];
-    console.log('current question = ' + currentQuestion);
-
     serveQuestion(currentQuestion);
   }
 }
@@ -162,7 +158,7 @@ function handleGuess(event){
     }
 
     let aiAnswer = randomIntInclusive(0, 1);
-    
+
     if (aiAnswer === 0){
       console.log('AI guesses correctly');
       opponent.score++;
@@ -183,8 +179,12 @@ function handleGuess(event){
   }
 }
 
-let playerCoords = [['45px', '250px'],['80px', '80px'],['275px','60px'],['480px','80px'],['533px','259px'],['480px','420px'],['275px','460px'],['80px','420px'], ['45px', '250px']];
-let opponentCoords = [['125px', '250px'],['140px', '130px'],['250px','125px'],['420px','130px'],['450px','250px'],['420px','380px'],['300px','400px'],['150px','375px'], ['125px', '250px']];
+// Player choice event handler
+function handleSubmit(event){
+  event.preventDefault();
+  document.getElementById('pregame').style.display='none';
+  document.getElementById('live-play').style.display='flex';
+}
 
 function advanceRacers(player, opponent){
   player.positionX = playerCoords[player.score][0];
@@ -222,17 +222,14 @@ function randomIndex() {
 //#region Event Listener
 
 answerForm.addEventListener('click', handleGuess);
+choice.addEventListener('submit', handleSubmit);
 
 //#endregion
 
 
 
-function handleSubmit(event){
-  event.preventDefault();
-  document.getElementById('pregame').style.display='none';
-  document.getElementById('live-play').style.display='flex';
-}
 
 
-choice.addEventListener('submit', handleSubmit);
+
+
 
