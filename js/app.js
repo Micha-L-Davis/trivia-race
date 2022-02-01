@@ -89,14 +89,13 @@ function Question(question, answer, optionsArr) {
 }
 
 Question.list = [];
+
 function Racer(image, name) {
   this.image = image;
   this.name = name;
   this.positionX = '45px';
   this.positionY = '250px';
   this.score = 0;
-
-
 }
 
 //#endregion
@@ -104,7 +103,7 @@ function Racer(image, name) {
 //#region Runtime Code
 
 let currentQuestion;
-let questionCount = 5;
+let questionCount = 15;
 let correctQuestions = 0;
 constructQuestions();
 chooseQuestion();
@@ -146,6 +145,7 @@ function handleGuess(event){
   if (event.target.value === currentQuestion.answer){
     console.log('correct!');
     player.score++;
+    console.log(player.score);
     advanceRacers(player,opponent);
   }
   else{
@@ -162,15 +162,15 @@ function handleGuess(event){
   }
 }
 
-let playerCoords = [[45, 250],[80, 80],[275,60],[480,80],[533,259],[480,420],[275,460],[80,420]];
-let opponentCoords = [[125, 250],[140, 130],[250,125],[420,130],[450,250],[420,380],[300,400],[150,375]];
+let playerCoords = [['45px', '250px'],['80px', '80px'],['275px','60px'],['480px','80px'],['533px','259px'],['480px','420px'],['275px','460px'],['80px','420px']];
+let opponentCoords = [['125px', '250px'],['140px', '130px'],['250px','125px'],['420px','130px'],['450px','250px'],['420px','380px'],['300px','400px'],['150px','375px']];
 
 function advanceRacers(player, opponent){
   player.positionX = playerCoords[player.score][0];
   player.positionY = playerCoords[player.score][1];
   opponent.positionX = opponentCoords[opponent.score][0];
   opponent.positionY = opponentCoords[opponent.score][1];
-
+  console.log(player.positionX);
   renderRacers(player,opponent);
 }
 
