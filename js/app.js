@@ -2,9 +2,9 @@
 
 //#region DOM Handles
 
+let choice = document.getElementById('player-select');
 let qPara = document.getElementById('q-para');
 let answerForm =  document.getElementById('input');
-let answerRadios = document.forms['input'].elements['answer'];
 let answerA = document.getElementById('answer-a');
 let answerB = document.getElementById('answer-b');
 let answerC = document.getElementById('answer-c');
@@ -96,6 +96,7 @@ function Racer(image, name) {
   this.positionX = '45px';
   this.positionY = '250px';
   this.score = 0;
+  this.date = new Date().toString();
 }
 
 //#endregion
@@ -104,7 +105,6 @@ function Racer(image, name) {
 
 let currentQuestion;
 let questionCount = 15;
-let correctQuestions = 0;
 constructQuestions();
 chooseQuestion();
 let player = new Racer('/img/racer-img/chicken_front.png','chicken');
@@ -141,24 +141,23 @@ function serveQuestion(question){
 // Answer Event Handler
 function handleGuess(event){
   event.preventDefault();
+  if(event.target.type === 'button'){
 
-  if (event.target.value === currentQuestion.answer){
-    console.log('correct!');
-    player.score++;
-    console.log(player.score);
-    advanceRacers(player,opponent);
-  }
-  else{
-    console.log('incorrect!');
-  }
-  if (questionCount){
-    for (let i in answerRadios){
-      // answerRadios[i].checked = false;
+    if (event.target.value === currentQuestion.answer){
+      console.log('correct!');
+      player.score++;
+      console.log(player.score);
+      advanceRacers(player,opponent);
     }
-    chooseQuestion();
-  }
-  else{
-    endRace();
+    else{
+      console.log('incorrect!');
+    }
+    if (player.score !== 8 || opponent.score !== 8){
+      chooseQuestion();
+    }
+    else{
+      endRace();
+    }
   }
 }
 
@@ -197,6 +196,20 @@ function randomIntInclusive(min, max) {
 
 //#region Event Listener
 
-answerForm.addEventListener('change', handleGuess);
+answerForm.addEventListener('click', handleGuess);
 
 //#endregion
+
+
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  document.getElementById('pregame').style.display='none';
+
+  document.getElementById('live-play').style.display='flex';
+}
+
+
+choice.addEventListener('submit', handleSubmit);
+

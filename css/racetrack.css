@@ -32,3 +32,17 @@
   top: 250px;
   left: 125px;
 }
+
+#live-play{
+  display:none;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+#quiz{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 300px;
+}
