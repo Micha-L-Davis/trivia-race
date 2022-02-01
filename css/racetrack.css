@@ -1,0 +1,12 @@
+#race {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 600px;
+}
+
+#race img {
+  height: 200px;
+}
+
+
+
