@@ -25,6 +25,8 @@ Trivia game race against an opponent.
 
 ### Authors: Brady Camp, Micha Davis, Nicholas Mercado, Matthew Rangel
 
+-----------------
+
 ### Links and Resources
 
 - [Wireframe](resources/wireframe.png)
@@ -34,7 +36,6 @@ Trivia game race against an opponent.
 - [Mozilla MDN Web Docs](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide)
 
 ### Reflections and Comments
-
 
 #### Morning Standup Monday, January 31, 2022
 
@@ -48,3 +49,15 @@ Led by Matt Rangel
 - settle on question theme, animal facts
 - build race track
 - add animal images
+
+#### Evening Standup Monday, January 31, 2022
+
+- Complete logic for trivia quesitons
+- Stylized main index page, about us, leaderboard
+  - Header and footer
+  - background colors, fonts,
+- Started racetrack
+
+-----------------
+
+#### Morning Standup Tuesday, February 1, 2022
