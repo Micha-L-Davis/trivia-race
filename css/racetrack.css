@@ -2,10 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 600px;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 #race img {
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 
