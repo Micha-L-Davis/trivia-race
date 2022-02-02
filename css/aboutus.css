@@ -1,4 +1,5 @@
 main{
+  
   height: 100%;
 }
 #dev1{
@@ -21,6 +22,7 @@ main{
 }
 
 #dev1 p{
+  font-size: 20px;
   padding-right: 5%;
   text-indent: 5%;
   padding-top: 5%;
@@ -47,11 +49,12 @@ main{
 }
 
 #dev2 p{
+  font-size: 20px;
   margin-left: 10%;
   padding-top: 5%;
   display: inline-block;
   float: left;
-  line-height: 150%;
+  line-height: 170%;
   text-indent: 5%;
 }
 
@@ -75,6 +78,7 @@ main{
 }
 
 #dev3 p{
+  font-size: 20px;
   padding-right: 5%;
   text-indent: 5%;
   padding-top: 5%;
@@ -101,10 +105,12 @@ main{
 }
 
 #dev4 p{
+  font-size: 20px;
   margin-left: 10%;
   padding-top: 5%;
+  padding-bottom: 3%;
   display: inline-block;
-  float: left;
+  float:left;
   line-height: 150%;
   text-indent: 5%;
 }
@@ -117,7 +123,7 @@ main{
   width:40%;
   margin: auto;
   margin-top: 2%;
-  margin-bottom: 10%;
+  margin-bottom: 4%;
 }
 
 #Additional div:first-child{
@@ -126,6 +132,7 @@ main{
 }
 
 #Additional div h2{
+  font-family: 'Racing Sans One', cursive;
   padding: 4%;
   padding-bottom: 6%;
 }
@@ -133,4 +140,9 @@ main{
 #Additional ul li{
   padding-left: 2em;
   padding-bottom: 2em;
+}
+
+
+#footer{
+  position: relative;
 }
