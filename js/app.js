@@ -243,15 +243,16 @@ function renderRacers(player, opponent){
 //renderRacers(playerImg, opponentImg);
 
 function endRace(){
-  player.score = (((1*easyQsCorrect) + (2*medQsCorrect) + (3*hardQsCorrect)) / totalQuestions) * 1000;
-  storeData();
-  updateLeaderboard();
   if (opponent.score > player.score){
     document.getElementById('loser').style.display='flex';
   }
   else {
     document.getElementById('winner').style.display='flex';
   }
+  player.score = (((1*easyQsCorrect) + (2*medQsCorrect) + (3*hardQsCorrect)) / totalQuestions) * 1000;
+  storeData();
+  updateLeaderboard();
+
 }
 
 let leaderboard = [];
