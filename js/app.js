@@ -78,7 +78,7 @@ let oArr = [
   ['Hippopotamus','Rhinoceros','Elephant','Polar Bear'],
 ];
 
-let playerCoords = [['45px', '250px', 'rear'],['80px', '80px', 'rear'],['275px','60px', 'right'],['480px','80px', 'right'],['533px','259px', 'front'],['480px','420px', 'front'],['275px','460px', 'left'],['80px','420px', 'left'], ['45px', '250px', 'rear']];
+let playerCoords = [['45px', '250px', 'rear'],['80px', '80px', 'rear'],['275px','50px', 'right'],['480px','80px', 'right'],['510px','259px', 'front'],['460px','400px', 'front'],['275px','440px', 'left'],['80px','420px', 'left'], ['45px', '250px', 'rear']];
 
 let opponentCoords = [['125px', '250px', 'rear'],['140px', '130px', 'rear'],['250px','125px', 'right'],['420px','130px', 'right'],['450px','250px', 'front'],['420px','380px', 'front'],['300px','400px', 'left'],['150px','375px', 'left'], ['125px', '250px', 'rear']];
 
