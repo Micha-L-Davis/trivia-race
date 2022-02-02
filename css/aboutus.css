@@ -1,0 +1,136 @@
+main{
+  height: 100%;
+}
+#dev1{
+  background-color:#abbe80;
+  border:  lightgray ;
+  display: flex;
+  width:70%;
+  margin: auto;
+  margin-top: 2%;
+  margin-left: 10%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1%;
+  
+} 
+
+#dev1 img{
+  max-height:10em;
+  margin: 1%;
+  margin-right: 10%
+}
+
+#dev1 p{
+  padding-right: 5%;
+  text-indent: 5%;
+  padding-top: 5%;
+  line-height: 150%;
+}
+
+#dev2{
+  border: solid black 2px;
+  display: flex;
+  width:70%;
+  margin: auto;
+  margin-top: 2%;
+  margin-right: 10%;
+  background-color:#abbe80;
+  border:  lightgray ;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1%;
+} 
+
+#dev2 img{
+  max-height:10em;
+  margin: 1%;
+  margin-left: 10% 
+}
+
+#dev2 p{
+  margin-left: 10%;
+  padding-top: 5%;
+  display: inline-block;
+  float: left;
+  line-height: 150%;
+  text-indent: 5%;
+}
+
+#dev3{
+  background-color:#abbe80;
+  border:  lightgray ;
+  display: flex;
+  width:70%;
+  margin: auto;
+  margin-top: 2%;
+  margin-left: 10%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1%;
+  
+} 
+
+#dev3 img{
+  max-height:10em;
+  margin: 1%;
+  margin-right: 10%
+}
+
+#dev3 p{
+  padding-right: 5%;
+  text-indent: 5%;
+  padding-top: 5%;
+  line-height: 150%;
+}
+
+#dev4{
+  border: solid black 2px;
+  display: flex;
+  width:70%;
+  margin: auto;
+  margin-top: 2%;
+  margin-right: 10%;
+  background-color:#abbe80;
+  border:  lightgray ;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1%;
+} 
+
+#dev4 img{
+  max-height:10em;
+  margin: 1%;
+  margin-left: 10% 
+}
+
+#dev4 p{
+  margin-left: 10%;
+  padding-top: 5%;
+  display: inline-block;
+  float: left;
+  line-height: 150%;
+  text-indent: 5%;
+}
+
+#Additional{
+  background-color:#abbe80;
+  border:  lightgray ;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1%;
+  width:40%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+
+#Additional div:first-child{
+  text-align: center;
+  font-size: 2em;
+}
+
+#Additional div h2{
+  padding: 4%;
+  padding-bottom: 6%;
+}
+
+#Additional ul li{
+  padding-left: 2em;
+  padding-bottom: 2em;
+}
