@@ -11,6 +11,7 @@ let answerC = document.getElementById('answer-c');
 let answerD = document.getElementById('answer-d');
 let playerImg = document.getElementById('player-racer');
 let opponentImg = document.getElementById('opponent-racer');
+let livePlay = document.getElementById('live-play');
 
 //#endregion
 
@@ -160,11 +161,12 @@ let totalQuestions = 0;
 // Answer Event Handler
 function handleGuess(event){
   event.preventDefault();
-  if(event.target.type === 'button'){
+  if(event.target.type === 'button' && event.target.name === 'answer'){
     totalQuestions++;
     console.log(totalQuestions);
     if (event.target.value === currentQuestion.answer){
       console.log('correct!');
+      document.getElementById('correct').style.display='flex';
       player.score++;
       if (currentQuestion.difficulty === 1){
         easyQsCorrect++;
@@ -180,6 +182,7 @@ function handleGuess(event){
     }
     else{
       console.log('incorrect!');
+      document.getElementById('incorrect').style.display='flex';
     }
 
     let aiAnswer = randomIntInclusive(0, 1);
@@ -194,13 +197,6 @@ function handleGuess(event){
     console.log(opponent.score);
 
     advanceRacers(player, opponent);
-
-    if (player.score >= 8 || opponent.score >= 8){
-      endRace();
-    }
-    else{
-      chooseQuestion();
-    }
   }
 }
 
@@ -283,19 +279,39 @@ function storeData() {
   localStorage.setItem('playerData', playerData);
 }
 
+function handleConfirm(event){
+  event.preventDefault();
+  if(event.target.type === 'button' && event.target.name !== 'answer'){
+    switch (event.target.name) {
+    case 'correct-answer':
+      document.getElementById('correct-answer').style.display='none';
+      break;
+    case 'incorrect-answer':
+      document.getElementById('incorrect-answer').style.display='none';
+      break;
+    case 'you-win':
+      document.getElementById('you-win').style.display='none';
+      break;
+    case 'you-lose':
+      document.getElementById('you-lose').style.display='none';
+      break;
+    default:
+      break;
+    }
+    if (player.score >= 8 || opponent.score >= 8){
+      endRace();
+    }
+    else{
+      chooseQuestion();
+    }
+  }
+}
 //#endregion
 
 //#region Event Listener
 
 answerForm.addEventListener('click', handleGuess);
 choice.addEventListener('submit', handleSubmit);
+livePlay.addEventListener('click', handleConfirm);
 
 //#endregion
-
-
-
-
-
-
-
-
