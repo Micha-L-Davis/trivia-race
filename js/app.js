@@ -220,7 +220,7 @@ function randomIndex() {
 
 function storeData() {
   console.log('saving');
-  let playerData = JSON.stringify(questionList);
+  let playerData = JSON.stringify(player);
   localStorage.setItem('leaderboard', playerData);
 }
 
