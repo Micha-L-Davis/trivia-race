@@ -95,3 +95,22 @@ To be completed today
 - Finish racetrack
 
 - Style the questions and inputs
+
+#### Evening Standup Tuesday, February 1, 2022
+
+**wrap up**
+
+- Implemented splash toggle
+- Leader board render function
+- We have created local storage
+
+**To do**
+
+- Notification for correct guesses
+- Notification for win or loss
+- Css touch up to questions
+- Figure out how to push array to leader board
+- Create image icon on character selections
+  - Input that icon for race
+- Select image for opponent
+- Add to player coordinates array face images
