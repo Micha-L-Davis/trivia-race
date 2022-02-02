@@ -111,7 +111,7 @@ function Racer(image, name) {
 let currentQuestion;
 constructQuestions();
 chooseQuestion();
-let player = new Racer('/img/racer-img/chicken_front.png','chicken');
+let player;
 let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
 //#endregion
 
@@ -182,6 +182,9 @@ function handleGuess(event){
 // Player choice event handler
 function handleSubmit(event){
   event.preventDefault();
+
+  console.log(event);
+  //  = new Racer('/img/racer-img/chicken_front.png','chicken')
   document.getElementById('pregame').style.display='none';
   document.getElementById('live-play').style.display='flex';
 }
@@ -208,6 +211,23 @@ renderRacers(playerImg, opponentImg);
 function endRace(){
   // display results
   storeData();
+  updateLeaderboard();
+}
+
+let leaderboard = [];
+function updateLeaderboard() {
+  let retrieveLeaderboard = localStorage.getItem('leaderboard');
+
+  if(retrieveLeaderboard) {
+    leaderboard = JSON.parse(retrieveLeaderboard);
+  }
+
+  let retrievePlayer = localStorage.getItem('playerData');
+  let parsedPlayer = JSON.parse(retrievePlayer);
+  leaderboard.push(parsedPlayer);
+
+  let stringifiedLeaderboard = JSON.stringify(leaderboard);
+  localStorage.setItem('leaderboard', stringifiedLeaderboard);
 }
 
 function randomIntInclusive(min, max) {
@@ -221,7 +241,7 @@ function randomIndex() {
 function storeData() {
   console.log('saving');
   let playerData = JSON.stringify(player);
-  localStorage.setItem('leaderboard', playerData);
+  localStorage.setItem('playerData', playerData);
 }
 
 //#endregion
