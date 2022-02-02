@@ -9,40 +9,15 @@ function updateLeaderboard() {
 
   if(retrieveLeaderboard) {
     leaderboard = JSON.parse(retrieveLeaderboard);
+    // call sort here
   }
 
   let stringifiedLeaderboard = JSON.stringify(leaderboard);
   localStorage.setItem('leaderboard', stringifiedLeaderboard);
 }
-// THIS IS JUST A TEST ***********
-// let parsedPlayer = [];
 
 // // sort feature <--- USE ME ON INCOMING JSON parsedPlayer
 // let playa = parsedPlayer.sort((score,b) => a - b);
-// console.log(playa);
-// function Racer(score, name) {
-
-//   this.name = name;
-
-
-//   this.score = score;
-//   this.date = new Date().toString();
-
-//   parsedPlayer.push(this);
-// }
-// console.log(parsedPlayer);
-// let p1 = new Racer(4, 'Rick');
-// let p2 = new Racer(8, 'Morty');
-// let p3 = new Racer(10, 'Stimpy');
-// let p4 = new Racer(100, 'Ren');
-
-//THIS IS THE END OF THE TEST ****************
-
-// // Grab window into the DOM
-// let myContainer = document.getElementById('table');
-
-// render the table on the scoreboard
-// render name, score, and date
 
 // After sorting, pop off any extras until the top three are left
 while (leaderboard.length > 3){
