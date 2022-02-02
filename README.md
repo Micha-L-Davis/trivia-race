@@ -114,3 +114,22 @@ To be completed today
   - Input that icon for race
 - Select image for opponent
 - Add to player coordinates array face images
+
+#### Morning Standup Wednesday, February 2, 2022
+
+- **Finish MVP**
+  - Finish layout of questions and leaderboard
+    - Stack answers as a list
+  - Add content to About page and add individual bios
+  - Add more trivia questions to pool
+
+  - **JavaScript**
+    - Add league rating / add more meaning to leaderboard score
+    - Add sort function
+
+  - **CSS**
+    - Update some images
+    - Leaderboard styling
+    - Quiz styling
+    - About page styling
+    - Reformat sizing for text, ect...

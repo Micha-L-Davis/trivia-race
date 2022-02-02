@@ -45,6 +45,8 @@ let qArr = [
   'Which mammal is not able to jump?',
 ];
 
+let difficultyArr = [2, 2, 3, 3, 1, 1, 2, 1, 3, 2, 2, 3, 3, 3, 2, 2, 1, 3, 3, 2, 3, 1, 1, 3, 3, 3];
+
 let aArr = ['c','a','d','a','b','b','c','b','a','d','d','c','a','b','a','d','c','d','d','a','b','c','d','a','b','c'];
 
 let oArr = [
@@ -84,10 +86,11 @@ let opponentCoords = [['125px', '250px'],['140px', '130px'],['250px','125px'],['
 
 //#region Question Constructor & Prototype
 
-function Question(question, answer, optionsArr) {
+function Question(question, answer, optionsArr, difficulty) {
   this.question = question;
   this.answer = answer;
   this.optionsArr = optionsArr;
+  this.difficulty = difficulty;
 
   questionList.push(this);
 }
@@ -122,7 +125,7 @@ let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
 // Populating Questions List
 function constructQuestions(){
   for (let i=0; i < qArr.length; i++){
-    new Question(qArr[i], aArr[i], oArr[i]);
+    new Question(qArr[i], aArr[i], oArr[i], difficultyArr[i]);
   }
 }
 
@@ -146,6 +149,11 @@ function serveQuestion(question){
 }
 
 
+//easy if currentQuestion === easyQsCorrect 
+let easyQsCorrect = 0;
+let medQsCorrect = 0;
+let hardQsCorrect = 0;
+
 // Answer Event Handler
 function handleGuess(event){
   event.preventDefault();
@@ -153,6 +161,15 @@ function handleGuess(event){
     if (event.target.value === currentQuestion.answer){
       console.log('correct!');
       player.score++;
+      if (currentQuestion.difficulty === 1){
+        easyQsCorrect++;
+      }
+      if ( currentQuestion.difficulty === 2){
+        medQsCorrect++;
+      }
+      if (currentQuestion.difficulty === 3){
+        hardQsCorrect++;
+      }
       console.log(player.score);
     }
     else{
@@ -221,6 +238,7 @@ renderRacers(playerImg, opponentImg);
 
 function endRace(){
   // display results
+  player.score = (((1*easyQsCorrect) + (2*medQsCorrect) + (3*hardQsCorrect)) / (easyQsCorrect + medQsCorrect + hardQsCorrect)) * 1000;
   storeData();
   updateLeaderboard();
 }
