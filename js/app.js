@@ -101,6 +101,8 @@ function Racer(image, name) {
   this.positionY = '250px';
   this.score = 0;
   this.date = new Date().toString();
+
+  playerImg.src = this.image;
 }
 
 //#endregion
@@ -184,7 +186,16 @@ function handleSubmit(event){
   event.preventDefault();
 
   console.log(event);
-  //  = new Racer('/img/racer-img/chicken_front.png','chicken')
+  let playerName = event.target[0].value;
+  let playerImage;
+  for (let i = 1; i <= 5; i++) {
+    if (event.target[i].checked === true){
+      console.log(event.target[i].value);
+      playerImage = `/img/racer-img/${event.target[i].value}_rear.png`;
+    }
+  }
+  player = new Racer(playerImage, playerName);
+  advanceRacers(player, opponent);
   document.getElementById('pregame').style.display='none';
   document.getElementById('live-play').style.display='flex';
 }
