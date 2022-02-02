@@ -78,9 +78,9 @@ let oArr = [
   ['Hippopotamus','Rhinoceros','Elephant','Polar Bear'],
 ];
 
-let playerCoords = [['45px', '250px'],['80px', '80px'],['275px','60px'],['480px','80px'],['533px','259px'],['480px','420px'],['275px','460px'],['80px','420px'], ['45px', '250px']];
+let playerCoords = [['45px', '250px', 'rear'],['80px', '80px', 'rear'],['275px','50px', 'right'],['480px','80px', 'right'],['510px','259px', 'front'],['460px','400px', 'front'],['275px','440px', 'left'],['80px','420px', 'left'], ['45px', '250px', 'rear']];
 
-let opponentCoords = [['125px', '250px'],['140px', '130px'],['250px','125px'],['420px','130px'],['450px','250px'],['420px','380px'],['300px','400px'],['150px','375px'], ['125px', '250px']];
+let opponentCoords = [['125px', '250px', 'rear'],['140px', '130px', 'rear'],['250px','125px', 'right'],['420px','130px', 'right'],['450px','250px', 'front'],['420px','380px', 'front'],['300px','400px', 'left'],['150px','375px', 'left'], ['125px', '250px', 'rear']];
 
 //#endregion
 
@@ -97,9 +97,10 @@ function Question(question, answer, optionsArr, difficulty) {
 
 let questionList = [];
 
-function Racer(image, name) {
+function Racer(image, name, animal) {
   this.image = image;
   this.name = name;
+  this.animal = animal;
   this.positionX = '45px';
   this.positionY = '250px';
   this.score = 0;
@@ -117,7 +118,8 @@ let currentQuestion;
 constructQuestions();
 chooseQuestion();
 let player;
-let opponent = new Racer('/img/racer-img/chicken_rear.png','chicken');
+let opponent = new Racer('/img/racer-img/chicken_rear.png','Cluck-U', 'chicken');
+
 //#endregion
 
 //#region Global Functions
@@ -209,13 +211,14 @@ function handleSubmit(event){
   console.log(event);
   let playerName = event.target[0].value;
   let playerImage;
+  let playerAnimal;
   for (let i = 1; i <= 5; i++) {
     if (event.target[i].checked === true){
-      console.log(event.target[i].value);
-      playerImage = `/img/racer-img/${event.target[i].value}_rear.png`;
+      playerAnimal = event.target[i].value;
+      playerImage = `/img/racer-img/${playerAnimal}_rear.png`;
     }
   }
-  player = new Racer(playerImage, playerName);
+  player = new Racer(playerImage, playerName, playerAnimal);
   advanceRacers(player, opponent);
   document.getElementById('pregame').style.display='none';
   document.getElementById('live-play').style.display='flex';
@@ -224,21 +227,24 @@ function handleSubmit(event){
 function advanceRacers(player, opponent){
   player.positionX = playerCoords[player.score][0];
   player.positionY = playerCoords[player.score][1];
+  player.image = `/img/racer-img/${player.animal}_${playerCoords[player.score][2]}.png`;
   opponent.positionX = opponentCoords[opponent.score][0];
   opponent.positionY = opponentCoords[opponent.score][1];
+  opponent.image = `/img/racer-img/${opponent.animal}_${opponentCoords[opponent.score][2]}.png`;
   renderRacers(player,opponent);
 }
 
 function renderRacers(player, opponent){
-
+  playerImg.src = player.image;
   playerImg.style.left = player.positionX;
   playerImg.style.top =player.positionY;
+  opponentImg.src = opponent.image;
   opponentImg.style.left = opponent.positionX;
   opponentImg.style.top = opponent.positionY;
 
 }
 
-renderRacers(playerImg, opponentImg);
+//renderRacers(playerImg, opponentImg);
 
 function endRace(){
   // display results
