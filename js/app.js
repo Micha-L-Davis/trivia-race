@@ -243,10 +243,15 @@ function renderRacers(player, opponent){
 //renderRacers(playerImg, opponentImg);
 
 function endRace(){
-  // display results
   player.score = (((1*easyQsCorrect) + (2*medQsCorrect) + (3*hardQsCorrect)) / totalQuestions) * 1000;
   storeData();
   updateLeaderboard();
+  if (opponent.score > player.score){
+    document.getElementById('loser').style.display='fixed';
+  }
+  else {
+    document.getElementById('winner').style.display='fixed';
+  }
 }
 
 let leaderboard = [];
@@ -282,26 +287,29 @@ function storeData() {
 function handleConfirm(event){
   event.preventDefault();
   if(event.target.type === 'button' && event.target.name !== 'answer'){
+
     switch (event.target.name) {
     case 'correct-answer':
-      document.getElementById('correct-answer').style.display='none';
+      document.getElementById('correct').style.display='none';
       break;
     case 'incorrect-answer':
-      document.getElementById('incorrect-answer').style.display='none';
+      document.getElementById('incorrect').style.display='none';
       break;
     case 'you-win':
-      document.getElementById('you-win').style.display='none';
+      document.getElementById('winner').style.display='none';
       break;
     case 'you-lose':
-      document.getElementById('you-lose').style.display='none';
+      document.getElementById('loser').style.display='none';
       break;
     default:
       break;
     }
+
     if (player.score >= 8 || opponent.score >= 8){
       endRace();
     }
     else{
+      console.log('why are we even here?');
       chooseQuestion();
     }
   }
