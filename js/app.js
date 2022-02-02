@@ -247,10 +247,10 @@ function endRace(){
   storeData();
   updateLeaderboard();
   if (opponent.score > player.score){
-    document.getElementById('loser').style.display='fixed';
+    document.getElementById('loser').style.display='flex';
   }
   else {
-    document.getElementById('winner').style.display='fixed';
+    document.getElementById('winner').style.display='flex';
   }
 }
 
