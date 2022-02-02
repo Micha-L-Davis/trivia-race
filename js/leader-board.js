@@ -7,20 +7,20 @@ updateLeaderboard();
 function updateLeaderboard() {
   let retrieveLeaderboard = localStorage.getItem('leaderboard');
 
-  if(retrieveLeaderboard) {
+  if (retrieveLeaderboard) {
     leaderboard = JSON.parse(retrieveLeaderboard);
     // call sort here
+    console.log(leaderboard);
   }
-
   let stringifiedLeaderboard = JSON.stringify(leaderboard);
   localStorage.setItem('leaderboard', stringifiedLeaderboard);
 }
 
 // // sort feature <--- USE ME ON INCOMING JSON parsedPlayer
-// let playa = parsedPlayer.sort((score,b) => a - b);
+leaderboard.sort((a,b) => b.score - a.score);
 
 // After sorting, pop off any extras until the top three are left
-while (leaderboard.length > 3){
+while (leaderboard.length > 3) {
   leaderboard.pop();
 }
 
