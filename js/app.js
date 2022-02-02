@@ -149,27 +149,31 @@ function serveQuestion(question){
 }
 
 
-//easy if currentQuestion === easyQsCorrect 
+// question difficulty counter and total questions asked variables
 let easyQsCorrect = 0;
 let medQsCorrect = 0;
 let hardQsCorrect = 0;
+let totalQuestions = 0;
 
 // Answer Event Handler
 function handleGuess(event){
   event.preventDefault();
   if(event.target.type === 'button'){
+    totalQuestions++;
+    console.log(totalQuestions);
     if (event.target.value === currentQuestion.answer){
       console.log('correct!');
       player.score++;
       if (currentQuestion.difficulty === 1){
         easyQsCorrect++;
       }
-      if ( currentQuestion.difficulty === 2){
+      if (currentQuestion.difficulty === 2){
         medQsCorrect++;
       }
       if (currentQuestion.difficulty === 3){
         hardQsCorrect++;
       }
+      console.log(currentQuestion.difficulty);
       console.log(player.score);
     }
     else{
@@ -238,7 +242,7 @@ renderRacers(playerImg, opponentImg);
 
 function endRace(){
   // display results
-  player.score = (((1*easyQsCorrect) + (2*medQsCorrect) + (3*hardQsCorrect)) / (easyQsCorrect + medQsCorrect + hardQsCorrect)) * 1000;
+  player.score = (((1*easyQsCorrect) + (2*medQsCorrect) + (3*hardQsCorrect)) / totalQuestions) * 1000;
   storeData();
   updateLeaderboard();
 }
