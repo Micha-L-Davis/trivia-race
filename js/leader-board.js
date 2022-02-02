@@ -4,6 +4,8 @@
 let leaderboard = [];
 updateLeaderboard();
 
+
+
 function updateLeaderboard() {
   let retrieveLeaderboard = localStorage.getItem('leaderboard');
 
@@ -30,6 +32,9 @@ function scoreBoard() {
 
   for (let i = 0; i < leaderboard.length; i++) {
 
+    // Date Variables
+    // let theDay = leaderboard[i].date.getDay();
+
     let tr = document.createElement('tr');
     table.appendChild(tr);
 
@@ -42,7 +47,7 @@ function scoreBoard() {
     tr.appendChild(td2);
 
     let td3 = document.createElement('td');
-    td3.textContent = leaderboard[i].score;
+    td3.textContent = ` : ${Math.ceil(leaderboard[i].score)}`;
     tr.appendChild(td3);
 
   }
