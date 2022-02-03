@@ -119,7 +119,7 @@ let currentQuestion;
 constructQuestions();
 chooseQuestion();
 let player;
-let opponent = new Racer('/img/racer-img/chicken_rear.png','Cluck-U', 'chicken');
+let opponent = new Racer('img/racer-img/chicken_rear.png','Cluck-U', 'chicken');
 
 //#endregion
 
