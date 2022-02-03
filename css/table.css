@@ -8,7 +8,7 @@
 #leader h2{
 text-align: center;
 font-family: 'Racing Sans One', cursive;
-font-size: 2vw;
+font-size: 4vw;
 margin-bottom: 3%;
 }
 
@@ -16,7 +16,6 @@ margin-bottom: 3%;
   background-color:#abbe80;
   border:  lightgray ;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  margin-bottom: 10%;
 }
 
 #table tr{
@@ -26,9 +25,9 @@ margin-bottom: 3%;
 #table td{
   border-top: solid black 1px;
   border-right: solid black 1px;
-  font-size: 20px;
+  font-size: 25px;
   width: 5%;
   height: 2%;
-  padding: 3%;
+  padding: 5%;
 
 }

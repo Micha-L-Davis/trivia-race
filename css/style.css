@@ -1,7 +1,7 @@
 
 
 body {
-
+  
   background-color: #abbe99;
 }
 /* ********************* Header ******************** */
@@ -10,14 +10,14 @@ header{
 }
 
 div img {
-  width: 10%;
+  width: 200px;
 }
 #banner {
   background-color: #71873f;
+  height: 150px;
   width: 90%;
-  height: 10em;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   text-align:center;
   margin:auto;
 }
@@ -25,7 +25,7 @@ div img {
 #banner h1 {
   font-family: 'Racing Sans One', cursive;
   font-size: 6vw;
-  padding-top: 3%;
+  padding-top: 30px;
   display: block;
   color:aliceblue;
   
@@ -74,16 +74,15 @@ a {
   background-color:#abbe80;
   border:  lightgray ;
   width: 50%;
-  height: 60%;
+  height: 600px;
   text-align: center;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   display:flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Teko', sans-serif;
-  padding-bottom: 2%;
 }
 
 #name-input{
@@ -129,14 +128,6 @@ text-align: center;
   top: 50%;
   left: 50%;
   background-color: #71873f;
-}
-
-#pregame button{
-color:aliceblue;
-background-color: #71871f;
-margin-top: 2%;
-width: 20%;
-height: 10%;
 }
 
 
