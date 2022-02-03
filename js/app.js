@@ -211,7 +211,7 @@ function handleSubmit(event){
   for (let i = 1; i <= 5; i++) {
     if (event.target[i].checked === true){
       playerAnimal = event.target[i].value;
-      playerImage = `/img/racer-img/${playerAnimal}_rear.png`;
+      playerImage = `img/racer-img/${playerAnimal}_rear.png`;
     }
   }
   player = new Racer(playerImage, playerName, playerAnimal);
@@ -223,10 +223,10 @@ function handleSubmit(event){
 function advanceRacers(player, opponent){
   player.positionX = playerCoords[player.score][0];
   player.positionY = playerCoords[player.score][1];
-  player.image = `/img/racer-img/${player.animal}_${playerCoords[player.score][2]}.png`;
+  player.image = `img/racer-img/${player.animal}_${playerCoords[player.score][2]}.png`;
   opponent.positionX = opponentCoords[opponent.score][0];
   opponent.positionY = opponentCoords[opponent.score][1];
-  opponent.image = `/img/racer-img/${opponent.animal}_${opponentCoords[opponent.score][2]}.png`;
+  opponent.image = `img/racer-img/${opponent.animal}_${opponentCoords[opponent.score][2]}.png`;
   renderRacers(player,opponent);
 }
 
