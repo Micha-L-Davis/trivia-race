@@ -1,40 +1,33 @@
 'use string';
 
-// retrieve data from local storage
+
 let leaderboard = [];
 updateLeaderboard();
+displayLeaderboard();
 
-
-
+// Retrieve saved leaderboard, if it exists, and sort the data. Trim any extra entries and save to local storage
 function updateLeaderboard() {
   let retrieveLeaderboard = localStorage.getItem('leaderboard');
 
   if (retrieveLeaderboard) {
     leaderboard = JSON.parse(retrieveLeaderboard);
-    // call sort here
-    console.log(leaderboard);
+
+    leaderboard.sort((a,b) => b.score - a.score);
+    while (leaderboard.length > 3) {
+      leaderboard.pop();
+    }
   }
+
   let stringifiedLeaderboard = JSON.stringify(leaderboard);
   localStorage.setItem('leaderboard', stringifiedLeaderboard);
 }
 
-// // sort feature <--- USE ME ON INCOMING JSON parsedPlayer
-leaderboard.sort((a,b) => b.score - a.score);
-
-// After sorting, pop off any extras until the top three are left
-while (leaderboard.length > 3) {
-  leaderboard.pop();
-}
-
-function scoreBoard() {
+// Display leaderboard
+function displayLeaderboard() {
 
   const table = document.querySelector('table');
 
   for (let i = 0; i < leaderboard.length; i++) {
-
-    // Date Variables
-    // let theDay = leaderboard[i].date.getDay();
-
     let tr = document.createElement('tr');
     table.appendChild(tr);
 
@@ -49,9 +42,7 @@ function scoreBoard() {
     let td3 = document.createElement('td');
     td3.textContent = Math.ceil(leaderboard[i].score);
     tr.appendChild(td3);
-
   }
 
 }
 
-scoreBoard();
