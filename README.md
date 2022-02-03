@@ -142,6 +142,7 @@ To be completed today
     - Added prompts for after the game to add links to play again or to leaderboard
   - Sorted Table scores and made them appear
   - Added time stamp
+  - Encoded rounding factor for scores
 - **CSS**
   - Entered and Styled about us
   - Styled leaderboard page
