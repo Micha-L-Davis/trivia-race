@@ -47,7 +47,7 @@ function scoreBoard() {
     tr.appendChild(td2);
 
     let td3 = document.createElement('td');
-    td3.textContent = ` : ${Math.ceil(leaderboard[i].score)}`;
+    td3.textContent = Math.ceil(leaderboard[i].score);
     tr.appendChild(td3);
 
   }
