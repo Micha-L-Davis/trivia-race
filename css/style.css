@@ -131,6 +131,14 @@ text-align: center;
   background-color: #71873f;
 }
 
+#pregame button{
+color:aliceblue;
+background-color: #71871f;
+margin-top: 2%;
+width: 20%;
+height: 10%;
+}
+
 
 /* ***************** FOOTER ******************* */
 #footer {
