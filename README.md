@@ -6,22 +6,24 @@ Trivia game race against an opponent.
 
 ### Minimum Viable Product (MVP) Definition
 
-- index page
-  - Splash page that prompts user on to how/why they should answer these questions.
-  - Prompt, for this trivia game, it could be a timer or bot that they can see.
-  - working bot will be stretch goal
-  - Appealing layout that has inputs for each question
-  - Stretch goal - choose themes. (up to 4)
-- about us page
-- JS
-  - constructor/container of trivia questions
-  - connecting local storage
-  - inputs an retrieving them
-  - record of league rating users wins and losses
-  - stretch goal - construct other racers for other racers to compete against.
-  - multiple choice
-  - stretch goal - text input/ short answer
-- Race graphics/representation of participants.
+- Main Page
+  - Greeting window prompting user to enter their name and select a racer
+  - Visual representation of the racetrack and racers.
+  - Quiz area with buttons for each possible answer.
+- Leaderboard
+  - Table with top three contestants, their scores, and the date/time
+- ‘About Us’ Page
+
+- JavaScript
+  - Question object constructor
+    - Question, answer, possible answers
+  - Racer object constructor
+    - Image, name, racer, score
+  - Local storage for leaderboard
+  - Random questions with even spread of difficulty.
+  - Multiple-choice input from user
+  - Representation of participants on racetrack.
+
 
 ### Authors: Brady Camp, Micha Davis, Nicholas Mercado, Matthew Rangel
 
