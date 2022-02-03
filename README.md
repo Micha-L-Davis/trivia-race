@@ -151,3 +151,34 @@ To be completed today
   - Merged to main
     - Hit MVP!!!
     - Troubleshooted upload to live web
+
+-----------------
+
+#### Morning Standup Thursday, February 3, 2022
+
+- **What we did yesterday**
+- COMPLETED MVP
+- Added alerts whetherer it was right or wrong
+- Leaderboard and About us page COMPLETE
+- Added play again or see results
+- Alert the user to where they won or loss
+  - **Lesson Learned** events blocks hyperlinks
+
+- **What are we planning for today**
+  - Style pop us
+  - Clean up JS code
+  - Take a look at resizing window
+  - Fix the size of the questions so they don't resize for each question
+  - Change out images to header
+    - **TO USE** Image - render, will sharpen the pixelated images
+  - Present to Audrey
+    - Populate slides and practice presentation
+  - Nic - Footers
+    - Style CSS
+  - Micha - Questions, to be fixed
+    - Racetrack CSS
+  - Brady - Pair with Nic
+  - Matt - Pair with Micha
+
+- **Blockers?**
+  - NO BLOCKERS TODAY
