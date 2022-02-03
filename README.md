@@ -6,22 +6,24 @@ Trivia game race against an opponent.
 
 ### Minimum Viable Product (MVP) Definition
 
-- index page
-  - Splash page that prompts user on to how/why they should answer these questions.
-  - Prompt, for this trivia game, it could be a timer or bot that they can see.
-  - working bot will be stretch goal
-  - Appealing layout that has inputs for each question
-  - Stretch goal - choose themes. (up to 4)
-- about us page
-- JS
-  - constructor/container of trivia questions
-  - connecting local storage
-  - inputs an retrieving them
-  - record of league rating users wins and losses
-  - stretch goal - construct other racers for other racers to compete against.
-  - multiple choice
-  - stretch goal - text input/ short answer
-- Race graphics/representation of participants.
+- Main Page
+  - Greeting window prompting user to enter their name and select a racer
+  - Visual representation of the racetrack and racers.
+  - Quiz area with buttons for each possible answer.
+- Leaderboard
+  - Table with top three contestants, their scores, and the date/time
+- ‘About Us’ Page
+
+- JavaScript
+  - Question object constructor
+    - Question, answer, possible answers
+  - Racer object constructor
+    - Image, name, racer, score
+  - Local storage for leaderboard
+  - Random questions with even spread of difficulty.
+  - Multiple-choice input from user
+  - Representation of participants on racetrack.
+
 
 ### Authors: Brady Camp, Micha Davis, Nicholas Mercado, Matthew Rangel
 
@@ -98,22 +100,22 @@ To be completed today
 
 #### Evening Standup Tuesday, February 1, 2022
 
-**wrap up**
+- **wrap up**
+  - Implemented splash toggle
+  - Leader board render function
+  - We have created local storage
 
-- Implemented splash toggle
-- Leader board render function
-- We have created local storage
-
-**To do**
-
-- Notification for correct guesses
-- Notification for win or loss
-- Css touch up to questions
+- **To do**
+  - Notification for correct guesses
+  - Notification for win or loss
+    - Css touch up to questions
 - Figure out how to push array to leader board
-- Create image icon on character selections
-  - Input that icon for race
-- Select image for opponent
-- Add to player coordinates array face images
+  - Create image icon on character selections
+    - Input that icon for race
+  - Select image for opponent
+  - Add to player coordinates array face images
+
+-----------------
 
 #### Morning Standup Wednesday, February 2, 2022
 
@@ -133,3 +135,52 @@ To be completed today
     - Quiz styling
     - About page styling
     - Reformat sizing for text, ect...
+
+#### Evening Standup Wednesday, February 2, 2022
+
+- **JavaScript**
+  - Added some JS Logic that added difficulty scale to players score
+  - Added logic to prompt the user with "correct" or "incorrect"
+    - Added prompts for after the game to add links to play again or to leaderboard
+  - Sorted Table scores and made them appear
+  - Added time stamp
+  - Encoded rounding factor for scores
+- **CSS**
+  - Entered and Styled about us
+  - Styled leaderboard page
+  - Fixed racer images to face direction
+- **General**
+  - Merged to main
+    - Hit MVP!!!
+    - Troubleshooted upload to live web
+
+-----------------
+
+#### Morning Standup Thursday, February 3, 2022
+
+- **What we did yesterday**
+- COMPLETED MVP
+- Added alerts whetherer it was right or wrong
+- Leaderboard and About us page COMPLETE
+- Added play again or see results
+- Alert the user to where they won or loss
+  - **Lesson Learned** events blocks hyperlinks
+
+- **What are we planning for today**
+  - Style pop us
+  - Clean up JS code
+  - Take a look at resizing window
+  - Fix the size of the questions so they don't resize for each question
+  - Change out images to header
+    - **TO USE** Image - render, will sharpen the pixelated images
+  - Present to Audrey
+    - Populate slides and practice presentation
+  - Nic - Footers
+    - Style CSS
+  - Micha - Questions, to be fixed
+    - Racetrack CSS
+  - Brady - Pair with Nic
+  - Matt - Pair with Micha
+
+- **Blockers?**
+  - NO BLOCKERS TODAY

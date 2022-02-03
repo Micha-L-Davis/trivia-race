@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 600px;
-  grid-template-rows: 1fr .7fr 1fr;
+  grid-template-rows: 1fr .59fr 1fr;
   position: relative;
 }
 
 .track {
-  max-width: 200px;
+  width: 200px;
   max-height: 200px;
   image-rendering: pixelated;
 }
@@ -15,6 +15,10 @@
 .too-big {
   height: 142px;
 }
+
+div.too-big {
+  width: 143px;
+} 
 
 .racer {
   image-rendering: pixelated;
@@ -42,6 +46,7 @@
   margin-left: 5%;
   margin-right: 5%;
   position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #quiz{
@@ -50,6 +55,7 @@
   justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
+  width: 250px;
 }
 
 #quiz h2 {
@@ -70,6 +76,11 @@
   border-radius: 1em;
 }
 
+#quiz input {
+  margin-bottom: 15%;
+  margin-top: 15%;
+}
+
 #answer-buttons p {
   grid-column-start: span 2; 
   margin-bottom: 5%;
@@ -77,5 +88,64 @@
 
 #answer-buttons span {
   margin-left: 2%;
+  margin-bottom: 5%;
 }
+
+.hidable {
+  width: 300px;
+  height: 230px;
+  box-shadow:5px 5px 10px rgba(25, 25, 25,.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+  border-radius: 1em;
+}
+
+.hidable p {
+  font-family: 'Racing Sans One', cursive;
+  font-size: xx-large;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+#you-win img {
+  width: 200px;
+  margin-left: 17%;
+  margin-right: 10%;
+}
+
+#you-lose img {
+    width: 200px;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+#incorrect img, #correct img {
+  width: 100px;
+  margin-left: 30%;
+}
+
+#you-lose div, #you-win div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.hidable p {
+  text-align: center;
+}
+
+#correct label, #incorrect label{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#correct input, #incorrect input {
+  margin-top: 5%;
+}
+
 

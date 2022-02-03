@@ -7,40 +7,51 @@ body {
 /* ********************* Header ******************** */
 header{
   text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-div img {
-  width: 200px;
+header img {
+  image-rendering: pixelated;
+  height: 150px;
 }
+
+#header-chicken {
+  position: absolute;
+  left: 275px;
+  top: 10px;
+  height: 50px;
+}
+
 #banner {
   background-color: #71873f;
-  height: 150px;
+  height: 10%;
   width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align:center;
   margin:auto;
 }
 
 #banner h1 {
   font-family: 'Racing Sans One', cursive;
-  font-size: 6vw;
+  font-size: 72pt;
   padding-top: 30px;
   display: block;
   color:aliceblue;
-  
+  position: relative;
 }
 
 #navi {
   border: none;
-
+  font-size: 20pt;
   background-color:#71873f;
   width: 89%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
-
+  font-family: 'Teko', arial;
 }
 nav ul li {
   margin-right: 20px;
@@ -74,7 +85,6 @@ a {
   background-color:#abbe80;
   border:  lightgray ;
   width: 50%;
-  height: 600px;
   text-align: center;
   margin: auto;
   margin-top: 30px;
@@ -83,6 +93,7 @@ a {
   flex-direction: column;
   align-items: center;
   font-family: 'Teko', sans-serif;
+  padding-bottom: 3%;
 }
 
 #name-input{
@@ -130,19 +141,27 @@ text-align: center;
   background-color: #71873f;
 }
 
+#pregame button{
+  font-family: 'Racing Sans One', cursive;
+  color:aliceblue;
+  background-color: #71873f;
+  margin-top: 5%;
+}
+
 
 /* ***************** FOOTER ******************* */
 #footer {
   background-color:#71873f;
  clear: both;
- position: fixed;
+ position: absolute;
  margin: auto;
  right: 0;
  left: 0;
  bottom: 0;
  width: 90%;
  text-align: center;
- height: 75px;
+ height: 3vw;
+ margin-top: 5%;
  
 }
 
