@@ -142,14 +142,14 @@ text-align: center;
 #footer {
   background-color:#71873f;
  clear: both;
- position: relative;
+ position: absolute;
  margin: auto;
  right: 0;
  left: 0;
  bottom: 0;
  width: 90%;
  text-align: center;
- height: 75px;
+ height: 3vw;
  margin-top: 5%;
  
 }
