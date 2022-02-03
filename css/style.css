@@ -74,7 +74,6 @@ a {
   background-color:#abbe80;
   border:  lightgray ;
   width: 50%;
-  height: 600px;
   text-align: center;
   margin: auto;
   margin-top: 30px;
@@ -83,6 +82,7 @@ a {
   flex-direction: column;
   align-items: center;
   font-family: 'Teko', sans-serif;
+  padding-bottom: 3%;
 }
 
 #name-input{
