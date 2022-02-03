@@ -10,14 +10,14 @@ header{
 }
 
 div img {
-  width: 200px;
+  width: 10%;
 }
 #banner {
   background-color: #71873f;
-  height: 150px;
   width: 90%;
+  height: 10em;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   text-align:center;
   margin:auto;
 }
@@ -25,7 +25,7 @@ div img {
 #banner h1 {
   font-family: 'Racing Sans One', cursive;
   font-size: 6vw;
-  padding-top: 30px;
+  padding-top: 3%;
   display: block;
   color:aliceblue;
   
