@@ -105,7 +105,7 @@ function Racer(image, name, animal) {
   this.positionX = '45px';
   this.positionY = '250px';
   this.score = 0;
-  this.date = new Date().toString();
+  this.date = new Date().toLocaleString();
 
   playerImg.src = this.image;
 }
