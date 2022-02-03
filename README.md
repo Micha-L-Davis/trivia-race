@@ -98,22 +98,22 @@ To be completed today
 
 #### Evening Standup Tuesday, February 1, 2022
 
-**wrap up**
+- **wrap up**
+  - Implemented splash toggle
+  - Leader board render function
+  - We have created local storage
 
-- Implemented splash toggle
-- Leader board render function
-- We have created local storage
-
-**To do**
-
-- Notification for correct guesses
-- Notification for win or loss
-- Css touch up to questions
+- **To do**
+  - Notification for correct guesses
+  - Notification for win or loss
+    - Css touch up to questions
 - Figure out how to push array to leader board
-- Create image icon on character selections
-  - Input that icon for race
-- Select image for opponent
-- Add to player coordinates array face images
+  - Create image icon on character selections
+    - Input that icon for race
+  - Select image for opponent
+  - Add to player coordinates array face images
+
+-----------------
 
 #### Morning Standup Wednesday, February 2, 2022
 
@@ -133,3 +133,20 @@ To be completed today
     - Quiz styling
     - About page styling
     - Reformat sizing for text, ect...
+
+#### Evening Standup Wednesday, February 2, 2022
+
+- **JavaScript**
+  - Added some JS Logic that added difficulty scale to players score
+  - Added logic to prompt the user with "correct" or "incorrect"
+    - Added prompts for after the game to add links to play again or to leaderboard
+  - Sorted Table scores and made them appear
+  - Added time stamp
+- **CSS**
+  - Entered and Styled about us
+  - Styled leaderboard page
+  - Fixed racer images to face direction
+- **General**
+  - Merged to main
+    - Hit MVP!!!
+    - Troubleshooted upload to live web
