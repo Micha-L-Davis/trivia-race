@@ -1,15 +1,15 @@
 #leader{
-  width: 70%;
+  width: 60%;
   margin: auto;
   margin-top: 4%;
   text-align: center;  
 }
 
 #leader h2{
-text-align: center;
-font-family: 'Racing Sans One', cursive;
-font-size: 4vw;
-margin-bottom: 3%;
+  text-align: center;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 4vw;
+  margin-bottom: 3%;
 }
 
 #table{
@@ -23,8 +23,8 @@ margin-bottom: 3%;
 }
 
 #table td{
+  
   border-top: solid black 1px;
-  border-right: solid black 1px;
   font-size: 25px;
   width: 5%;
   height: 2%;
