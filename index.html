@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/racetrack.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Neonderthaw&family=Roboto:ital,wght@0,100;1,300&family=Teko&display=swap" rel="stylesheet">
+    <title>Animal Racer!</title>
+</head>
+<body>
+    <header >
+        <div id="banner">
+            <img src="img/photoholgic-ISpQ_OUqmO4-unsplash.jpg" alt="">
+            <div>
+                <h1>Animal Racer</h1>
+            </div>
+            <img src="img/yale-cohen-9lgHTAvxO0U-unsplash.jpg" alt="">
+        </div>
+        <nav id="navi">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scorecard.html">Leaderboard</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>  
+      </header>
+    <main>
+        <section id="pregame">
+            <form id="player-select">
+                <div id="welcome-box">
+                    <h2 id="welcome">Welcome to Animal Racer!</h2>
+                    <p>This is a trivia race to the finish line!</p>
+                    <p>Put your animal knowledge to the test!</p>
+                </div>
+                <div id="name-input">
+                    <label>Your Name:
+                        <input type="text" name="user-name" required="required">
+                    </label>
+                </div>
+                <div id="player-choice">
+                    <div id="selectR">
+                        <label>Select a Racer:
+                    </div>
+                    <div id="choice">
+                        <input type="radio" name="user-icon" value="chicken" required="required">Chicken
+                        <input type="radio" name="user-icon" value="llama" required="required">Llama
+                        <input type="radio" name="user-icon" value="cow" required="required">Cow
+                        <input type="radio" name="user-icon" value="pig" required="required">Pig
+                        <input type="radio" name="user-icon" value="sheep" required="required">Sheep
+                    </div>   
+                    </label>
+                </div>
+                <button type="submit" value="submit">Start Race!</button>
+            </form>
+        </section>
+        <section id="live-play">
+            <div id="race">
+                <img id="topLeft" src="/img/track-img/Road_02_Tile_02.png" alt="" class="track">
+                <img id="topCenter" src="/img/track-img/Road_02_Tile_04.png" alt="" class="track">
+                <img id="topRight" src="/img/track-img/Road_02_Tile_09.png" alt="" class="track">
+                <img id="start" src="/img/track-img/Road_02_Tile_Start.png" alt="" class="track">
+                <div class="too-big"></div>
+                <img class="too-big track" src="/img/track-img/Road_02_Tile_03.png" alt="">
+                <img id="bottomLeft" src="/img/track-img/Road_02_Tile_01.png" alt="" class="track">
+                <img id="bottomCenter" src="/img/track-img/Road_02_Tile_04.png" alt="" class="track">
+                <img id="bottomRight" src="/img/track-img/Road_02_Tile_010.png" alt="" class="track">
+                <img id="player-racer" src="img/racer-img/chicken_rear.png" class="racer">
+                <img id="opponent-racer" src="img/racer-img/chicken_rear.png" class="racer">
+            </div>
+            <div id="quiz">
+            <div id="questions">
+                <h2 id="q-para"></h2>
+            </div>
+            <form id="input">
+                <fieldset>
+                    <label id="answer-buttons"><p>Chose an answer:</p>
+                        <input type="button" name="answer" value="a"> <span id="answer-a"></span>
+                        <input type="button" name="answer" value="b"> <span id="answer-b"></span>
+                        <input type="button" name="answer" value="c"> <span id="answer-c"></span>
+                        <input type="button" name="answer" value="d"> <span id="answer-d"></span>
+                    </label>
+                </fieldset>
+            </form>
+            </div>
+            <div id="correct" class="hidable">
+                <label id="correct-answer"><p>That is correct!</p>
+                    <input type="button" name="correct-answer" value="Next Question">
+                </label>
+            </div>
+            <div id="incorrect" class="hidable">
+                <label id="incorrect-answer"><p>That is incorrect!</p>
+                    <input type="button" name="incorrect-answer" value="Next Question">
+                </label>
+            </div>
+            <div id="winner" class="hidable">
+                <div id="you-win"><p>Congratulations you win!</p>
+                    <div><a href="index.html">Play Again!"</a></div>
+                    <div><a href="scorecard.html">Click to see leaderboard!"</a></div>
+                </div>
+            </div>
+            <div id="loser" class="hidable">
+                <div id="you-lose"><p>Sorry, you lost!</p>
+                    <div><a href="index.html">Play Again!</a></div>
+                    <div><a href="scorecard.html">Click to see leaderboard!</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div id="right-footer" class="center">
+            Made at <a href="https://www.codefellows.org">CodeFellows</a>
+        </div>
+        <div id="left-footer" class="center">
+            ©2022 The Go-Gitters
+        </div>
+    </footer>
+    <script src="/js/app.js"></script>
+</body>
+</html>

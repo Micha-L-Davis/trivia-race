@@ -1,0 +1,81 @@
+#race {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 600px;
+  grid-template-rows: 1fr .7fr 1fr;
+  position: relative;
+}
+
+.track {
+  max-width: 200px;
+  max-height: 200px;
+  image-rendering: pixelated;
+}
+
+.too-big {
+  height: 142px;
+}
+
+.racer {
+  image-rendering: pixelated;
+  max-height: 100px;
+  width: auto;
+}
+
+#player-racer {
+  position: absolute;
+  top: 250px;
+  left: 45px;
+}
+
+#opponent-racer {
+  position: absolute;
+  top: 250px;
+  left: 125px;
+}
+
+#live-play{
+  display:none;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+}
+
+#quiz{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#quiz h2 {
+  font-weight: bold;
+  font-size:larger;
+  background-color: #71873f;
+  padding: 10%;
+  border-radius: 1em;
+  margin-bottom: 2%;
+}
+
+#answer-buttons {
+  display: grid;
+  grid-template-columns: .05fr 1fr;
+  grid-template-rows: .25fr .25fr .25fr .25fr;
+  background-color: #71873f;
+  padding: 10%;
+  border-radius: 1em;
+}
+
+#answer-buttons p {
+  grid-column-start: span 2; 
+  margin-bottom: 5%;
+}
+
+#answer-buttons span {
+  margin-left: 2%;
+}
+
