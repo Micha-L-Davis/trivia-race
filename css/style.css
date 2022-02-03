@@ -135,7 +135,7 @@ text-align: center;
 #footer {
   background-color:#71873f;
  clear: both;
- position: fixed;
+ position: relative;
  margin: auto;
  right: 0;
  left: 0;
@@ -143,6 +143,7 @@ text-align: center;
  width: 90%;
  text-align: center;
  height: 75px;
+ margin-top: 5%;
  
 }
 
