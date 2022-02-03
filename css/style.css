@@ -130,6 +130,13 @@ text-align: center;
   background-color: #71873f;
 }
 
+#pregame button{
+  font-family: 'Racing Sans One', cursive;
+  color:aliceblue;
+  background-color: #71873f;
+  margin-top: 5%;
+}
+
 
 /* ***************** FOOTER ******************* */
 #footer {
