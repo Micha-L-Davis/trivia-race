@@ -243,6 +243,7 @@ function renderRacers(player, opponent){
 //renderRacers(playerImg, opponentImg);
 
 function endRace(){
+  livePlay.removeEventListener('click', handleConfirm);
   if (opponent.score > player.score){
     document.getElementById('loser').style.display='flex';
   }
