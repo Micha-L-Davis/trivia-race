@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 600px;
-  grid-template-rows: 1fr .7fr 1fr;
+  grid-template-rows: 1fr .59fr 1fr;
   position: relative;
 }
 
 .track {
-  max-width: 200px;
+  width: 200px;
   max-height: 200px;
   image-rendering: pixelated;
 }
@@ -15,6 +15,10 @@
 .too-big {
   height: 142px;
 }
+
+div.too-big {
+  width: 143px;
+} 
 
 .racer {
   image-rendering: pixelated;

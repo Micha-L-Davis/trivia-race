@@ -53,8 +53,8 @@ main{
   font-size: 20px;
   margin-left: 10%;
   padding-top: 5%;
+  padding-bottom: 5%;
   display: inline-block;
-  float: left;
   line-height: 170%;
   text-indent: 5%;
 }
@@ -83,6 +83,7 @@ main{
   padding-right: 5%;
   text-indent: 5%;
   padding-top: 5%;
+  padding-bottom: 5%;
   line-height: 150%;
 }
 
@@ -101,6 +102,7 @@ main{
 
 #dev4 img{
   padding-top: 1%;
+  padding-bottom: 1%;
   max-height:8em;
   margin: 1%;
   margin-left: 10% 
@@ -112,7 +114,7 @@ main{
   padding-top: 5%;
   padding-bottom: 5%;
   display: inline-block;
-  float:left;
+  float: left;
   line-height: 150%;
   text-indent: 5%;
 }
@@ -140,8 +142,8 @@ main{
 }
 
 #Additional ul li{
-  padding-left: 2em;
-  padding-bottom: 2em;
+  padding-left: 5%;
+  padding-bottom: 5%;
 }
 
 
