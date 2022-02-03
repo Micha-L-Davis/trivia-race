@@ -50,6 +50,7 @@
   justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
+  width: 250px;
 }
 
 #quiz h2 {
@@ -78,4 +79,35 @@
 #answer-buttons span {
   margin-left: 2%;
 }
+
+.hidable {
+  width: 300px;
+  height: 175px;
+  box-shadow:5px 5px 10px rgba(25, 25, 25,.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidable p {
+  font-family: 'Racing Sans One', cursive;
+  font-size: xx-large;
+}
+
+#you-lose div, #you-win div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+#correct label, #incorrect label{
+  display: flex;
+  flex-direction: column;
+}
+
+#correct input, #incorrect input {
+  margin-top: 5%;
+}
+
 
