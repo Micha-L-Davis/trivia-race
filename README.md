@@ -1,8 +1,6 @@
-# Final Project
+# Trivia Race
 
-## Trivia Race
-
-Trivia game race against an opponent.
+Farm animal themed trivia game race against an opponent.
 
 ### Minimum Viable Product (MVP) Definition
 
